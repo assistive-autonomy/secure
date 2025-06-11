@@ -273,8 +273,8 @@
                 <ul class="semantic-bullets">
                     <li><strong>Agent's belief state</strong> contains domain theory build over the course of embodied conversation and examplars of observation-symbol pairs from experience.</li>
                     <li><strong>Dialogue strategy</strong> measures the value of asking certain questions to the teacher.</li>
-                    <li>Query value is measured using expected information gain: \(\mathbb{I}[b,a] = \mathbb{H}[b] - \mathbb{E}_{\phi \sim \mathrm{Result}(a)}[\mathbb{H}[\mathrm{Update}(b,\phi)]]\) </li>
-                    <li>It is included in the value function in weigthing query value and extected reward that includes the cost of wrong prediction: \(Q(b,a)=\theta_1\mathbb{I}[b,a]+\theta_2\mathbb{E}_{b}[R(a)]\)</li>
+                    <li>Query value is measured using expected information gain: \(I(b,a) = H(b) - \mathbb{E}_{\phi \sim \mathrm{Result}(a)}[H(\mathrm{Update}(b,\phi))]\) </li>
+                    <li>It is included in the value function in weigthing query value and extected reward that includes the cost of wrong prediction: \(Q(b,a)=\theta_1I(b,a)+\theta_2\mathbb{E}_{b}[R(a)]\)</li>
                 </ul>
                 <img src="assets/task.png" alt="Task Iliustation" class="semantic-image">
             </div>
