@@ -1,0 +1,53 @@
+seed: 42
+train: False
+wandb:
+  use_wandb: True
+  project: secure
+  entity: assistive-autonomy
+generator:
+  model_name: codellama/CodeLlama-7b-Instruct-hf
+  client: <service-path:port>:8080
+  temperature: 0.001
+  top_k: 50
+  do_sample: False
+  num_beams: 1
+  max_new_tokens: 100
+grounder:
+  model_name: facebook/dinov2-small
+  threshold: 0.65
+  feat_size: 384
+belief:
+  base: 0.5
+  priors:
+  - [object, 1.0]
+  - [plain, 0.5]
+  - [dotted, 0.5]
+  - [stary, 0.5]
+  semaware: False
+learner:
+  name: sem-learner
+  point_cost: 0.1
+  symbol_cost: 0.1
+  semaware: False
+  dialogue: False
+  load_path: saved_models/sem-learner-90-39.pt
+  save_path: saved_models
+  save: True
+  load: False
+  learning_rate: 0.1
+  epsilon: 0.0
+  gamma: 0.99
+  init_weights: [0.2, 1.5]
+  update_freq: 5
+oracle:
+  name: teacher
+  explain: True
+env:
+  viewer: False
+  num_tasks: 60
+  max_attempts: 5
+  num_tasks_per_env: 2
+  pressupose_prob: 0.7
+  min_objects: 6
+  max_objects: 8
+  camera: overhead_camera/overhead_camera

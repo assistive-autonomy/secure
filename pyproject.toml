@@ -1,0 +1,37 @@
+[tool.poetry]
+name = "secure"
+version = "0.1.0"
+description = "Semantics-aware Embodied Conversation under Unawareness for Lifelong Robot Learning"
+authors = ["rimvydasrub <rimvydasrub@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "3.10.6"
+numpy = "^1.16.0"
+# Logging and configuration
+hydra-core = "^1.3.2"
+wandb = "^0.16.1"
+# Neural networks
+torch = "^1.9.0"
+torchvision = "^0.13.0"
+transformers = "^4.10.0"
+# Reasoning 
+logic_toolkit = {git="git@github.com:ipab-rad/logic_toolkit.git"}
+inflect = "^7.2.1"
+# Environment
+# mujoco_robot_environments = "^0.1.0"
+opencv-python = "^4.9.0.80"
+seaborn = "^0.13.2"
+scikit-learn = "^1.5.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+
+[tool.black]
+line-length = 120
+
+[tool.flake8]
+max-line-length = 120
