@@ -3,10 +3,8 @@
 ![Python Version](https://img.shields.io/badge/python-3.10.6+-blue)
 ![License](https://img.shields.io/github/license/assistive-autonomy/secure)
 
-
 [Paper](https://arxiv.org/abs/2409.17755) | [Website](https://assistive-autonomy.github.io/secure/)
 
-<img src="website/assets/overview.png" height=500/>
 
 ## Instalation
 
